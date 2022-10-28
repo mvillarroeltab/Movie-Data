@@ -33,3 +33,22 @@ let movieData = {
     cast: ["Ralph Fiennes", "F. Murray Abraham", "Mathieu Amalric"],
   },
 };
+
+const movie1 = "The Darjeeling Limited";
+const first = movieData[movie1];
+
+const movie2 = "The Royal Tenenbaums";
+const second = movieData[movie2];
+
+const movie3 = "Fantastic Mr. Fox";
+const third = movieData[movie3];
+
+const movie4 = "The Grand Budapest Hotel";
+const fourth = movieData[movie4];
+
+console.log(first);
+
+document.getElementById("1").innerHTML = Object.values(first);
+document.getElementById("2").innerHTML = Object.values(second);
+document.getElementById("3").innerHTML = Object.values(third);
+document.getElementById("4").innerHTML = Object.values(fourth);
