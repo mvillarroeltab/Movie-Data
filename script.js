@@ -34,21 +34,59 @@ let movieData = {
   },
 };
 
-const movie1 = "The Darjeeling Limited";
-const first = movieData[movie1];
+var movieArray = [];
+for (title in movieData) {
+  var data = movieData[title];
+  data.title = title;
+  movieArray.push(data);
+}
 
-const movie2 = "The Royal Tenenbaums";
-const second = movieData[movie2];
+console.log(movieArray);
 
-const movie3 = "Fantastic Mr. Fox";
-const third = movieData[movie3];
+function render(items) {
+  var index = 0;
+  while (index < items.length) {
+    let item = items[index];
+    document.getElementById(`${index + 1}`).innerHTML =
+    `<img class="image-m" src="./images/${item.title}.jpg" alt="Movie1" />`
+    + "<h1>" + item.title + "</h1>"
+    + "<br>"
+    + "<p>" + item.plot + "</p>"
+    + "<p>Rating: " + item.rating + "</p>"
+    + "<p>Runtime: " + item.runtime + "</p>"
+    + "<p>Year: " + item.year + "</p>";
 
-const movie4 = "The Grand Budapest Hotel";
-const fourth = movieData[movie4];
+    index = index + 1;
+  }
+};
 
-console.log(first);
+function sortByRating(a, b) {
+  if (a.rating > b.rating) {
+    return -1;
+  } else {
+    return 1;
+  }
+}
 
-document.getElementById("1").innerHTML = Object.values(first);
-document.getElementById("2").innerHTML = Object.values(second);
-document.getElementById("3").innerHTML = Object.values(third);
-document.getElementById("4").innerHTML = Object.values(fourth);
+movieArray.sort(sortByRating);
+
+render(movieArray);
+
+// const movie1 = "The Darjeeling Limited";
+// const first = movieData[movie1];
+//
+// const movie2 = "The Royal Tenenbaums";
+// const second = movieData[movie2];
+//
+// const movie3 = "Fantastic Mr. Fox";
+// const third = movieData[movie3];
+//
+// const movie4 = "The Grand Budapest Hotel";
+// const fourth = movieData[movie4];
+//
+// console.log(first);
+//
+// document.getElementById("1").innerHTML = Object.values(first);
+// document.getElementById("2").innerHTML = Object.values(second);
+// document.getElementById("3").innerHTML = Object.values(third);
+// document.getElementById("4").innerHTML = Object.values(fourth);
