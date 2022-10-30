@@ -55,11 +55,18 @@ function render(items) {
     + "<p>Rating: " + item.rating + "</p>"
     + "<p>Runtime: " + item.runtime + "</p>"
     + "<p>Year: " + item.year + "</p>";
+    + "<p>Cast: " + item.cast.toString() + "</p>";
 
     index = index + 1;
-  }
-};
 
+  }
+
+};
+render(movieArray);
+
+// Function to sort by rating
+
+function sort1rating (){
 function sortByRating(a, b) {
   if (a.rating > b.rating) {
     return -1;
@@ -67,10 +74,47 @@ function sortByRating(a, b) {
     return 1;
   }
 }
-
 movieArray.sort(sortByRating);
 
 render(movieArray);
+}
+
+let sort1 = document.getElementById('rat');
+sort1.addEventListener ('click', sort1rating);
+
+// Function to sort by year
+
+function sort1year (){
+function sortByYear(a, b) {
+  if (a.year > b.year) {
+    return -1;
+  } else {
+    return 1;
+  }
+}
+movieArray.sort(sortByYear);
+
+render(movieArray);
+}
+
+let sort2 = document.getElementById('yea');
+sort2.addEventListener ('click', sort1year);
+
+function sort1runt (){
+function sortByRuntime(a, b) {
+  if (a.runtime > b.runtime) {
+    return -1;
+  } else {
+    return 1;
+  }
+}
+movieArray.sort(sortByRuntime);
+
+render(movieArray);
+}
+
+let sort3 = document.getElementById('runt');
+sort3.addEventListener ('click', sort1runt);
 
 // const movie1 = "The Darjeeling Limited";
 // const first = movieData[movie1];
