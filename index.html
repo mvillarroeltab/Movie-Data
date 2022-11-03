@@ -14,9 +14,7 @@
 <body>
   <button class="btn">Sort by</button>
   <div class="dropdown">
-    <button class="btn" style="border-left:1px solid navy">
-      &#x25BC
-    </button>
+    <button class="btn" style="border-left:1px solid navy">ᐁ</button>
     <div class="dropdown-content">
       <a id="rat" href="#">Rating</a>
       <a id="yea" href="#">Year</a>
@@ -24,18 +22,33 @@
     </div>
   </div>
 
-
   <section id="gallery">
-  <div class="movie-gallery">
-   <div id ="1" class="box1"></div>
-   <div id ="2" class="box1"></div>
-   <div id ="3" class="box1"></div>
-   <div id ="4" class="box1"></div>
+  <div id="movie" class="movie-gallery">
+
   </div>
 
   </section>
+  <section id="newMovie">
+  <div class="movie-gallery">
 
 
+  <form method="post">
+    <label for="newTitle">Title:</label>
+    <input type="text" id="newTitle" name="newTitle"><br><br>
+    <label for="newPlot">Plot:</label>
+    <input type="text" id="newPlot" name="newPlot"><br><br>
+    <label for="newRating">Rating:</label>
+    <input type="text" id="newRating" name="newRating"><br><br>
+    <label for="newRuntime">Runtime:</label>
+    <input type="text" id="newRuntime" name="newRuntime"><br><br>
+    <label for="newYear">Year:</label>
+    <input type="text" id="newYear" name="newYear"><br><br>
+    <label for="newCast">Cast:</label>
+    <input type="text" id="newCast" name="newCast"><br><br>
+    <input type="submit" id= "submit" value="Submit">
+  </form>
+  </div>
+</section>
 
 </body>
 
