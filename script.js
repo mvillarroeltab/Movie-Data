@@ -44,9 +44,12 @@ for (title in movieData) {
 console.log(movieArray);
 
 function render(items) {
+
   var index = 0;
   while (index < items.length) {
     let item = items[index];
+
+
     document.getElementById(`${index + 1}`).innerHTML =
     `<img class="image-m" src="./images/${item.title}.jpg" alt="Movie1" />`
     + "<h1>" + item.title + "</h1>"
@@ -54,13 +57,12 @@ function render(items) {
     + "<p>" + item.plot + "</p>"
     + "<p>Rating: " + item.rating + "</p>"
     + "<p>Runtime: " + item.runtime + "</p>"
-    + "<p>Year: " + item.year + "</p>";
+    + "<p>Year: " + item.year + "</p>"
     + "<p>Cast: " + item.cast.toString() + "</p>";
 
     index = index + 1;
 
   }
-
 };
 render(movieArray);
 
