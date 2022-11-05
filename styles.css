@@ -1,40 +1,59 @@
 /* GENERAL */
 body {
-  padding: 0 3% 0 3%;
+  margin: 0;
   font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
-  font-size: 150%;
-  margin: 50px auto 0;
+  font-size: 180%;
+  margin: 0 auto 0;
+  padding-top: 25px;
   font-family: 'Montserrat', sans-serif;
-  color: #66BFBF;
+  color: #001253;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 120%;
+  margin: 0 auto 10px;
   font-family: 'Montserrat', sans-serif;
-  color: #66BFBF;
+  color: #001253;
   font-weight: normal;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #3E6D9C;
+  font-weight: bold;
 }
 
 p{
   font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
-  color: #66BFBF;
+  color: #001253;
   font-weight: normal;
 }
 
 /* HEADER */
+.movieIcon {
+  height: 60px;
+  margin: 20px 20px 20px;
+  float: left;
+}
 .header {
-  margin: 0;
-  text-align: center;
+  height: 100px;
+
   font-family: 'Montserrat', sans-serif;
+  background-color: #E14D2A;
 }
 /* Dropdown Button */
+.bar{
+  background-color: #EAEAEA;
+  width: 100%;
+  text-align: right;
+}
 .btn {
-  background-color: grey;
-  color: white;
+  background-color: #EAEAEA;
+  color: #3E6D9C;
   padding: 10px;
   font-size: 16px;
   border: none;
@@ -46,20 +65,23 @@ p{
 .dropdown {
   position: absolute;
   display: inline-block;
+  right: 0;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
-  position: absolute;
-  background-color: #f1f1f1;
+  width: 100%;
+
+  background-color: #EAEAEA;
   min-width: 160px;
   z-index: 1;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  color: black;
+  font-size: 0.75em;
+  color: #3E6D9C;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -75,30 +97,34 @@ p{
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .btn:hover, .dropdown:hover .btn  {
-  background-color: grey;
+  background-color: #ddd;
 }
 
 /* MOVIE GALLERY */
 
 .movie-gallery {
+  padding: 0 3% 0 3%;
   display: flex;
   flex: 1.5;
   justify-content: space-around;
   flex-wrap: wrap;
+  padding: 10px;
   width: 100%;
   align-items: stretch;
-  background-color: #FFFFFF;
+  background-color: white;
+  border-radius: 10px;
 
 }
 
 .box1 {
+  background-color: #EAEAEA;
+  border-radius: 6px;
   padding: 10px;
   width: 20%;
   min-width: 300px;
-  margin: 20px 0 20px 0;
+  margin: 10px 0 10px 0;
   text-align: center;
   line-height: 2;
-  background-color: white;
 }
 
 /* Image stying */

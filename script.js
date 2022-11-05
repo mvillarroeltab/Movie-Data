@@ -53,7 +53,7 @@ function render(items) {
     document.getElementById('movie').innerHTML +=
     "<div class='box1'>"
     +`<img class="image-m" src="./images/${item.title}.jpg" alt="Movie1" />`
-    + "<h1>" + item.title + "</h1>"
+    + "<h3>" + item.title + "</h3>"
     + "<br>"
     + "<p>" + item.plot + "</p>"
     + "<p>Rating: " + item.rating + "</p>"
