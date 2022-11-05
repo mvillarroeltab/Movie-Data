@@ -38,6 +38,7 @@ var movieArray = [];
 for (title in movieData) {
   var data = movieData[title];
   data.title = title;
+  data.imageURL = `./images/${title}.jpg`;
   movieArray.push(data);
 }
 
@@ -52,9 +53,8 @@ function render(items) {
 
     document.getElementById('movie').innerHTML +=
     "<div class='box1'>"
-    +`<img class="image-m" src="./images/${item.title}.jpg" alt="Movie1" />`
+    +`<div class="image-div"><img class="image-m" src="${item.imageURL}" alt="Movie-image" /></div>`
     + "<h3>" + item.title + "</h3>"
-    + "<br>"
     + "<p>" + item.plot + "</p>"
     + "<p>Rating: " + item.rating + "</p>"
     + "<p>Runtime: " + item.runtime + "</p>"
@@ -92,6 +92,7 @@ function addMovie (){
   var runtime = document.getElementById('newRuntime').value;
   var year = document.getElementById('newYear').value;
   var cast = document.getElementById('newCast').value;
+  var imageURL = document.getElementById('newImageURL').value;
   event.preventDefault();
   console.log(`title: ${title}`);
   console.log(`plot: ${plot}`);
@@ -101,7 +102,8 @@ function addMovie (){
     rating: rating,
     runtime: runtime,
     year: year,
-    cast: [cast]
+    cast: [cast],
+    imageURL: imageURL
   };
 
   movieArray.push(newMovie);
